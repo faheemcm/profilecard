@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    background: transparent;
+    font-weight: normal;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+ol, ul {
+    list-style: none;  
+}
+
+del {
+    text-decoration: line-through;
+}
+
+@font-face {
+    font-family: 'poppins-semibold';
+    src: url('../fonts/poppins/poppins-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/poppins/poppins-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins-medium';
+    src: url('../fonts/poppins/poppins-medium-webfont.woff2') format('woff2'),
+         url('../fonts/poppins/poppins-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('../fonts/poppins/poppins-regular-webfont.woff2') format('woff2'),
+         url('../fonts/poppins/poppins-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'poppins';
+    font-size: 14px;
+    color: #fff;
+    min-width: 320px;
+    font-weight: 500;
+    background: url(../images/background.jpg) center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+input, textarea, select {
+    font-family: 'poppins';
+}
+
+#card {
+    padding: 50px;
+    width: 400px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+#card div.image {
+    width: 100px;
+    display: block;
+    border-radius: 100%;
+    border: 3px solid #fff;
+    padding: 5px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+}
+#card div.image img {
+    width: 100%;
+    display: block;
+    border-radius: 100%;
+}
+#card h1 {
+    font-size: 32px;
+    font-family: 'poppins-semibold';
+    margin-bottom: 8px;
+}
+#card span {
+    font-size: 16px;
+    font-family: 'poppins-medium';
+    letter-spacing: 0.5rem;
+    opacity: 0.8;
+}
+#card p {
+    line-height: 1.2rem;
+    margin-top: 24px;
+}
+#card ul.media {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px auto;
+}
+#card ul.media li {
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 100%;
+}
+#card ul.media li a {
+    display: block;
+}
+#card ul.media li a img {
+    width: 100%;
+    display: block;
+    height: 100%;
+    filter: brightness(0) invert(1);
+    transition: 0.3s;
+}
+#card ul.media li:hover a img {
+    filter: none;
+}
+#card hr {
+    border-top: 1px solid #fff;
+    margin-bottom: 40px;
+}
+#card a.button {
+    font-size: 16px;
+    color: #fff;
+    padding: 12px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    transition: 0.3s;
+
+}
+#card a.button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media all and (max-width: 980px) {
+    #card {
+        width: 350px;
+        padding: 40px 30px;
+    }
+    #card h1 {
+        font-size: 28px;
+    }
+    #card span {
+        font-size: 14px;
+    }
+    #card p {
+        font-size: 14px;
+    }
+    #card ul.media {
+        width: 70%;
+    }
+    #card a.button {
+        font-size: 14px;
+    }
+}
+@media all and (max-width: 768px) {
+    #card p {
+        margin-top: 18px;
+    }
+    #card ul.media {
+        margin: 30px auto;
+    }
+    #card hr {
+        margin-bottom: 30px;
+    }
+}
+@media all and (max-width: 640px) {
+    #card {
+        width: 300px;
+        padding: 30px 20px;
+    }
+    #card h1 {
+        font-size: 26px;
+    }
+    #card span {
+        font-size: 12px;
+    }
+    #card ul.media {
+        width: 80%;
+    }
+    #card a.button {
+        font-size: 12px;
+    }
+}
+@media all and (max-width: 480px) {
+    #card div.image {
+        width: 80px;
+    }
+    #card {
+        width: 250px;
+    }
+    #card h1 {
+        font-size: 24px;
+    }
+    #card span {
+        font-size: 11px;
+    }
+    #card p {
+        font-size: 12px;
+    }
+    #card ul.media {
+        width: 90%;
+    }
+    #card ul.media li {
+        width: 18px;
+        height: 18px;
+    }
+    #card a.button {
+        font-size: 11px;
+    }
+}
+@media all and (max-width: 360px) {}
+@media all and (max-width: 320px) {}
